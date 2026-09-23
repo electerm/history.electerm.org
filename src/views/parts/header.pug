@@ -1,0 +1,32 @@
+//- Site header for the release archive. English only — the archive is a
+//- single-language site, so there is no language switcher here (and no
+//- lang.lang lookups: the copy below is literal).
+
+header.site-header
+  .container.header-inner
+    a.header-logo(href='/')
+      img(src=assetHost + '/electerm.png', alt='electerm')
+      span.header-logo-tag release history
+
+    nav.header-nav
+      a(href='/releases/') Releases
+      a(href='https://electerm.org/', target='_blank', rel='noreferrer') electerm.org
+      a(href='https://electerm.org/#downloads', target='_blank', rel='noreferrer') Download latest
+      a(href='https://github.com/electerm/electerm/wiki', target='_blank', rel='noreferrer') Docs
+      a.header-github-link(href='https://github.com/electerm/electerm', target='_blank', rel='noreferrer')
+        span GitHub
+
+    .header-actions
+      button.mobile-menu-btn(type='button', aria-label='Open menu', aria-expanded='false', aria-controls='mobile-nav')
+        svg(width='24' height='24' viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2')
+          line(x1='3', y1='6', x2='21', y2='6')
+          line(x1='3', y1='12', x2='21', y2='12')
+          line(x1='3', y1='18', x2='21', y2='18')
+
+nav.mobile-nav#mobile-nav
+  a(href='/releases/') Releases
+  a(href='https://electerm.org/', target='_blank', rel='noreferrer') electerm.org
+  a(href='https://electerm.org/#downloads', target='_blank', rel='noreferrer') Download latest
+  a(href='https://github.com/electerm/electerm/wiki', target='_blank', rel='noreferrer') Docs
+  a.header-github-link(href='https://github.com/electerm/electerm', target='_blank', rel='noreferrer')
+    span GitHub

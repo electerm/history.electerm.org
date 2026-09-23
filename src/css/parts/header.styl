@@ -1,0 +1,113 @@
+/* ===== Header ===== */
+
+.site-header
+  position sticky
+  top 0
+  z-index 100
+  background rgba(255,255,255,0.92)
+  backdrop-filter blur(12px)
+  -webkit-backdrop-filter blur(12px)
+  border-bottom 1px solid var(--color-border)
+  height var(--header-height)
+
+.header-inner
+  display flex
+  align-items center
+  justify-content space-between
+  height var(--header-height)
+
+.header-logo
+  display flex
+  align-items center
+  gap 10px
+  font-weight 700
+  font-size 1.15rem
+  color var(--color-text)
+  text-decoration none
+
+.header-logo:hover
+  color var(--color-text)
+
+.header-logo img
+  height 32px
+  width auto
+
+.header-nav
+  display none
+  align-items center
+  gap 8px
+
+@media (min-width: 768px)
+  .header-nav
+    display flex
+
+.header-nav a
+  padding 8px 14px
+  border-radius var(--radius-sm)
+  color var(--color-text-secondary)
+  font-size 0.9rem
+  font-weight 500
+  transition all 0.15s
+
+.header-nav a:hover
+  color var(--color-text)
+  background var(--color-bg-alt)
+
+.header-github-link
+  display inline-flex
+  align-items center
+  gap 6px
+
+.header-actions
+  display flex
+  align-items center
+  gap 8px
+
+.mobile-menu-btn
+  display flex
+  align-items center
+  justify-content center
+  width 40px
+  height 40px
+  border none
+  background none
+  cursor pointer
+  border-radius var(--radius-sm)
+  color var(--color-text)
+
+.mobile-menu-btn:hover
+  background var(--color-bg-alt)
+
+@media (min-width: 768px)
+  .mobile-menu-btn
+    display none
+
+.mobile-nav
+  display none
+  position fixed
+  top var(--header-height)
+  left 0
+  right 0
+  bottom 0
+  background var(--color-bg)
+  z-index 99
+  padding 20px
+
+.mobile-nav.open
+  display block
+
+.mobile-nav a
+  display block
+  padding 14px 0
+  color var(--color-text)
+  font-size 1.1rem
+  font-weight 500
+  border-bottom 1px solid var(--color-border-light)
+
+.mobile-nav a:hover
+  color var(--color-primary)
+
+.mobile-nav .header-github-link
+  display flex
+  align-items center
+  justify-content space-between

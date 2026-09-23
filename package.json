@@ -1,0 +1,73 @@
+{
+  "name": "history.electerm.org",
+  "version": "0.3.1",
+  "description": "electerm release history archive — past version download pages",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "node bin/dev-server.js",
+    "b": "./bin/build",
+    "build": "echo 1",
+    "build-only": "./bin/build-only",
+    "build-html": "node bin/build-all.js",
+    "build-css": "node bin/build-css.js",
+    "build-js": "node bin/build-js.js",
+    "down-releases": "node bin/fetch-release-json.js",
+    "down-releases-all": "node bin/fetch-release-json.js --all && node bin/fetch-android.js --all",
+    "down-android": "node bin/fetch-android.js",
+    "down-android-all": "node bin/fetch-android.js --all",
+    "sitemap": "node bin/sitemap.js",
+    "fix": "standard --fix",
+    "lint": "standard",
+    "pub": "npm run b && wrangler deploy",
+    "cp": "cp -r src/static/. public/",
+    "rm": "rm -rf public/ && mkdir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerm/history.electerm.org.git"
+  },
+  "keywords": [
+    "electerm",
+    "electerm release archive",
+    "electerm downloads"
+  ],
+  "author": {
+    "name": "ZHAO Xudong",
+    "email": "zxdong@gmail.com",
+    "url": "http://html5beta.com"
+  },
+  "devDependencies": {
+    "axios": "^1.18.0",
+    "canvas": "^3.2.3",
+    "dayjs": "^1.11.21",
+    "dotenv": "^17.4.2",
+    "esbuild": "^0.28.2",
+    "express": "^5.2.1",
+    "marked": "^18.0.10",
+    "morgan": "^1.11.0",
+    "pug": "^3.0.4",
+    "sitemaps": "^2.0.6",
+    "standard": "^17.1.2",
+    "stylus": "^0.64.0"
+  },
+  "standard": {
+    "ignore": [
+      "*.html",
+      "/res/",
+      "/temp",
+      "/data",
+      "/public"
+    ],
+    "parserOptions": {
+      "requireConfigFile": false,
+      "sourceType": "module"
+    }
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/electerm/history.electerm.org/issues"
+  },
+  "homepage": "https://history.electerm.org"
+}

@@ -1,0 +1,42 @@
+doctype html
+html(lang=langCode)
+  head
+    title #{siteName} - Page Not Found (404)
+    meta(name='description' content='The page you are looking for does not exist on the electerm website. Try navigating to our home page, download page, FAQ, or search for what you need.')
+    include ./parts/react-header
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Page Not Found",
+        "description": "404 error page for electerm website",
+        "url": "#{host}/404.html",
+        "mainEntityOfPage": {
+          "@type": "WebSite",
+          "name": "electerm",
+          "url": "#{host}"
+        }
+      }
+  body
+    include ./parts/header
+    main.error-page
+      .container
+        .error-content
+          h1.error-code 404
+          h2.error-title Page Not Found
+          p.error-desc The page you are looking for does not exist or has been moved. This is just a missing page — the rest of the electerm website is working fine.
+          .error-actions
+            a.error-btn.error-btn-primary(href='/') Go to Home Page
+            a.error-btn.error-btn-secondary(href='/releases/') Browse all releases
+            a.error-btn.error-btn-secondary(href='https://electerm.org/#downloads', target='_blank', rel='noreferrer') Download electerm
+            a.error-btn.error-btn-secondary(href='https://electerm.org/', target='_blank', rel='noreferrer') electerm.org
+          .error-search
+            p.error-search-label Or try searching on GitHub:
+            a.error-search-link(href='https://github.com/electerm/electerm/issues?q=' target='_blank' rel='noreferrer') Search Issues
+            a.error-search-link(href='https://github.com/electerm/electerm/discussions' target='_blank' rel='noreferrer') Browse Discussions
+          .error-report
+            p Think this is a broken link?
+            a(href='https://github.com/electerm/electerm/issues/new' target='_blank' rel='noreferrer') Report it on GitHub ↗
+    include ./parts/footer
+    include ./parts/page-script
+    +pageScript('404')

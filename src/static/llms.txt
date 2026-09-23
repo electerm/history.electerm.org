@@ -1,0 +1,131 @@
+# electerm release archive
+
+> The complete archive of every electerm release: 582 versions published between 2017-11-29 and 2026-09-21, each with its original release notes and its original download files, kept permanently downloadable.
+
+## What this site is
+
+This is **history.electerm.org**, the electerm release archive. Its single purpose is to keep every electerm release ever published available for download, long after it has been superseded.
+
+It is **not** the electerm product site. For the current release, documentation, downloads of the latest version and support, use [https://electerm.org](https://electerm.org). Anything on this archive is a historical version — useful for pinning an old version, reproducing a bug on a specific build, or installing on a machine that cannot run the current release.
+
+What each page gives you:
+
+- The release notes exactly as published for that version (bilingual: English and Chinese, as upstream wrote them).
+- The original asset files for that version, grouped by platform and CPU architecture, with the file size and a short description of what each file is for.
+- A direct link to the file on GitHub Releases, plus a mirror link for networks where GitHub is slow or blocked.
+
+## Pages
+
+- [Home](https://history.electerm.org/) — what the archive is, the newest release, and the most recent versions.
+- [All releases](https://history.electerm.org/releases/) — every version, newest first, grouped by year.
+- [A specific version](https://history.electerm.org/releases/v5.5.25/) — release notes and download files for one version. This is the page shape to link to; replace `v5.5.25` with any version tag.
+- [Sitemap](https://history.electerm.org/sitemap.xml) — every version page on the site.
+
+There are no other page types. Blog, FAQ, video guides, about, sponsor, terms and privacy pages are **not** on this site — they live at [https://electerm.org](https://electerm.org).
+
+## Downloading a specific version
+
+Every version page is `/releases/<version>/`, where `<version>` is the upstream git tag, e.g. `v5.5.25`. Tags look like `v5.5.25` for releases from v3.x onward and like `1.13.4` for some very old ones; the archive uses the tag exactly as published.
+
+The underlying files are the upstream GitHub release assets, so their URLs are predictable:
+
+```
+https://github.com/electerm/electerm/releases/download/<version>/<filename>
+```
+
+Asset filenames embed the version and the target, for example:
+
+- `electerm-5.5.25-linux-amd64.deb`, `electerm-5.5.25-linux-aarch64.rpm`, `electerm-5.5.25-linux-amd64.snap`
+- `electerm-5.5.25-linux-arm64-legacy.AppImage` — `-legacy` builds target glibc < 2.34 (e.g. Ubuntu 18, UOS, Kylin)
+- `electerm-5.5.25-mac-arm64.dmg`, `electerm-5.5.25-mac-x64.dmg`, `electerm-5.5.25-mac10-x64.dmg`
+- `electerm-5.5.25-win-x64.exe`, `electerm-5.5.25-win-arm64.exe`, `electerm-5.5.25-win7-x64.exe`
+
+For networks where `github.com` is slow or unreachable, the same file is mirrored by prefixing the GitHub URL with `https://mirror.electerm.org/`:
+
+```
+https://mirror.electerm.org/https://github.com/electerm/electerm/releases/download/<version>/<filename>
+```
+
+Android builds are published from the separate [electerm-android](https://github.com/electerm/electerm-android) repository and are merged onto the matching version page. Only a minority of versions (12 of the 582) have Android builds.
+
+## About electerm
+
+electerm is an open-source terminal / file manager and SSH / SFTP / FTP / Telnet / serialport / RDP / VNC / Spice client, supporting Linux, macOS, Windows, Android, HarmonyOS and iOS.
+
+Besides the mainstream Windows / macOS / Linux / Android platforms, electerm also supports HarmonyOS, iOS, and older systems such as Ubuntu 18, Windows 7, macOS 10+, as well as domestic Linux distributions like UOS and Kylin, LoongArch (both old-world and new-world), RISC-V (riscv64) and PowerPC 64-bit little-endian (ppc64le) Linux.
+
+## Key features
+
+- Works as a terminal / file manager or an SSH / SFTP / FTP / Telnet / serialport / RDP / VNC / Spice client
+- Supports Windows 7+ (X64/ARM64), HarmonyOS, Android, iOS, macOS 10.15+ (X64/arm64), Linux (X64/arm64/armv7/LoongArch64/RISC-V/ppc64le), and older systems with glibc 2.17+
+- Global hotkey to toggle window visibility (similar to guake, default `ctrl + 2`)
+- Multi-language support (Chinese, English, Japanese, Korean, Russian, Spanish, French, and more, see [electerm-locales](https://github.com/electerm/electerm-locales), contributions/fixes welcome)
+- Double-click to directly edit small remote files
+- Public key + password authentication
+- Zmodem (rz, sz) and Trzsz (trz/tsz) support, compatible with tmux, see [Trzsz](https://github.com/trzsz/trzsz)
+- SSH tunnel and global / session proxy support
+- Terminal background image and transparent window
+- Quick commands, UI / terminal themes
+- Sync bookmarks / themes / quick commands to GitHub / Gitee secret gist, WebDAV, a custom server, or electerm cloud
+- Integrated AI assistant for command suggestions, script writing, explaining selected content, and creating bookmarks / themes
+- MCP (Model Context Protocol) widget for AI assistant and external tool integration - see [MCP Widget Usage Guide](https://github.com/electerm/electerm/wiki/MCP-Widget-Usage-Guide)
+- Deep link support, e.g. `ssh://user@host:22`, `telnet://192.168.2.31:34554` - see [Deep link support wiki](https://github.com/electerm/electerm/wiki/Deep-link-support)
+- Command-line usage - see [wiki](https://github.com/electerm/electerm/wiki/Command-line-usage)
+
+## Sub-projects and related links
+
+- Product site / current downloads: [https://electerm.org](https://electerm.org)
+- Source code: [https://github.com/electerm/electerm](https://github.com/electerm/electerm)
+- Release notes (upstream): [https://github.com/electerm/electerm/releases](https://github.com/electerm/electerm/releases)
+- Theme live editor, live preview & sharing: [https://theme.electerm.org](https://theme.electerm.org)
+- Online demo: [https://demo.electerm.org](https://demo.electerm.org)
+- electerm online (free cloud app): [https://cloud.electerm.org](https://cloud.electerm.org)
+- electerm AI: [https://ai.electerm.org](https://ai.electerm.org)
+- electerm-web (browser version, including mobile): [https://github.com/electerm/electerm-web](https://github.com/electerm/electerm-web)
+- electerm-android: [https://github.com/electerm/electerm-android](https://github.com/electerm/electerm-android)
+- electerm-harmony (HarmonyOS): [https://github.com/electerm/electerm-harmony](https://github.com/electerm/electerm-harmony)
+- electerm-ios (iOS): [https://github.com/electerm/electerm-ios](https://github.com/electerm/electerm-ios)
+- Docker deployment: [https://github.com/electerm/electerm-web-docker](https://github.com/electerm/electerm-web-docker)
+- Locales: [https://github.com/electerm/electerm-locales](https://github.com/electerm/electerm-locales)
+- App stores
+  - Apple App Store: [https://apps.apple.com/cn/app/electerm/id6792971552](https://apps.apple.com/cn/app/electerm/id6792971552)
+  - Huawei AppGallery: [https://appgallery.huawei.com/app/detail?id=org.electerm.electerm](https://appgallery.huawei.com/app/detail?id=org.electerm.electerm)
+  - Microsoft Store: [https://www.microsoft.com/store/apps/9NCN7272GTFF](https://www.microsoft.com/store/apps/9NCN7272GTFF)
+  - Snap Store: [https://snapcraft.io/electerm](https://snapcraft.io/electerm)
+- Package repositories
+  - deb repo: [https://repos.electerm.org/deb](https://repos.electerm.org/deb)
+  - rpm repo: [https://repos.electerm.org/rpm](https://repos.electerm.org/rpm)
+
+## Install the current version
+
+These install the **latest** release, not an archived one:
+
+- macOS: `brew install --cask electerm`
+- Linux (snap): `sudo snap install electerm --classic`
+- Windows: Microsoft Store, winget (`winget install electerm.electerm`), or Scoop
+- npm: `npm i -g electerm`
+
+To install a specific archived version instead, download the file from that version's page at `/releases/<version>/`.
+
+## Documentation
+
+- [Wiki](https://github.com/electerm/electerm/wiki) - Documentation and guides
+- [Known Issues](https://github.com/electerm/electerm/wiki/Know-issues) - Current limitations
+- [Troubleshooting](https://github.com/electerm/electerm/wiki/Troubleshoot) - Common solutions
+- [Discussions](https://github.com/electerm/electerm/discussions) - Community forum
+
+## Support the project
+
+- [GitHub Sponsors](https://github.com/sponsors/electerm)
+- [Ko-fi](https://ko-fi.com/zhaoxudong)
+- TRON (TRN20) donation: Address `TXk3pQNmQu1vihH76RaEFnK9wg13x4LLCZ`
+
+## License
+
+electerm is released under the [MIT License](https://github.com/electerm/electerm/blob/master/LICENSE).
+
+## Contact
+
+- [Report Issues](https://github.com/electerm/electerm/issues)
+- [Feature Requests](https://github.com/electerm/electerm/discussions)
+- [Email](mailto:zxdong@gmail.com)

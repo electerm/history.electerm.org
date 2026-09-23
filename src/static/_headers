@@ -1,0 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  # Everything here is public archive material (icons, screenshots, styles), so
+  # let any origin embed it. _headers cannot express a per-Origin condition —
+  # only "*" — and the asset runtime applies this to every asset response.
+  Access-Control-Allow-Origin: *

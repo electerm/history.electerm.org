@@ -1,0 +1,48 @@
+//- Site footer for the release archive. English only, and every link points at
+//- something that actually exists: /releases/* on this site, everything else on
+//- electerm.org or GitHub.
+
+footer.site-footer
+  .container
+    .footer-grid
+      .footer-brand
+        .footer-brand-name
+          img(src=assetHost + '/electerm.png', alt='electerm')
+          span electerm release history
+        p The electerm release archive: every version ever published, kept downloadable. The current release, documentation and support live at electerm.org.
+      .footer-col
+        h4 Release archive
+        ul
+          li: a(href='/releases/') All releases
+          li: a(href='https://github.com/electerm/electerm/releases', target='_blank', rel='noreferrer') Release notes on GitHub
+          li: a(href='https://electerm.org/#downloads', target='_blank', rel='noreferrer') Latest version download
+          li: a(href='https://repos.electerm.org/deb', target='_blank', rel='noreferrer') APT repository
+          li: a(href='https://repos.electerm.org/rpm', target='_blank', rel='noreferrer') RPM repository
+          li: a(href='https://snapcraft.io/electerm', target='_blank', rel='noreferrer') Snap Store
+      .footer-col
+        h4 electerm.org
+        ul
+          li: a(href='https://electerm.org/', target='_blank', rel='noreferrer') Home
+          li: a(href='https://github.com/electerm/electerm/wiki', target='_blank', rel='noreferrer') Documentation
+          li: a(href='https://electerm.org/videos/', target='_blank', rel='noreferrer') Video guides
+          li: a(href='https://electerm.org/blogs/', target='_blank', rel='noreferrer') Blog
+          li: a(href='https://electerm.org/faq/', target='_blank', rel='noreferrer') FAQ
+          li: a(href='https://electerm.org/sponsor-electerm/', target='_blank', rel='noreferrer') Sponsor electerm
+      .footer-col
+        h4 Community
+        ul
+          li: a(href='https://github.com/electerm/electerm', target='_blank', rel='noreferrer') GitHub
+          li: a(href='https://github.com/electerm/electerm/discussions', target='_blank', rel='noreferrer') Discussions
+          li: a(href='https://github.com/electerm/electerm/issues', target='_blank', rel='noreferrer') Report issues
+          li: a(href='https://github.com/electerm/electerm-locales', target='_blank', rel='noreferrer') Translations
+          li: a(href='https://cloud.electerm.org', target='_blank', rel='noreferrer') electerm cloud
+          li: a(href='https://theme.electerm.org/', target='_blank', rel='noreferrer') electerm theme
+    .footer-bottom
+      p © 2026 ZHAO Xudong. MIT License.
+      .footer-bottom-links
+        a(href='https://electerm.org/about/', target='_blank', rel='noreferrer') About
+        a(href='https://electerm.org/contact/', target='_blank', rel='noreferrer') Contact
+        a(href='https://electerm.org/terms/', target='_blank', rel='noreferrer') Terms
+        a(href='https://electerm.org/privacy-policy/', target='_blank', rel='noreferrer') Privacy policy
+        a(href='https://html5beta.com', target='_blank', rel='noreferrer') Author
+        a(href='http://github.com/zxdong262', target='_blank', rel='noreferrer') GitHub

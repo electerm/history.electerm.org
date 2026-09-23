@@ -1,0 +1,21 @@
+#!/bin/bash
+# Same build as `./bin/build`, kept as a separate entry point for a bare
+# rebuild. It must export the *archive* host: without it, every canonical URL,
+# og:url and JSON-LD `url` in the generated HTML points at electerm.org instead
+# of history.electerm.org.
+set -e
+cd `dirname $0`
+cd ../
+export HOST=https://history.electerm.org
+rm -rf public
+mkdir public
+echo "copy files"
+npm run cp
+echo "build css"
+npm run build-css
+echo "build js"
+npm run build-js
+echo "build html"
+npm run build-html
+echo "build sitemap"
+npm run sitemap

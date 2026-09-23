@@ -1,0 +1,38 @@
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1.0')
+meta(name='author' content='ZHAO Xudong')
+meta(name='robots' content='index, follow')
+link(rel='canonical' href=url)
+
+if typeof hreflangLinks !== 'undefined'
+  each link in hreflangLinks
+    link(rel='alternate' hreflang=link.hreflang href=link.url)
+
+//- Icons come from electerm.org rather than being duplicated here — see the
+//- `assetHost` note in bin/data.js. `og:image` must stay an absolute URL, so the
+//- shared origin is exactly what a crawler needs.
+link(rel='icon' type='image/x-icon' href=assetHost + '/favicon.ico')
+link(rel='icon' type='image/png' sizes='32x32' href=assetHost + '/favicon-32x32.png')
+link(rel='icon' type='image/png' sizes='16x16' href=assetHost + '/favicon-16x16.png')
+link(rel='apple-touch-icon' sizes='180x180' href=assetHost + '/apple-touch-icon.png')
+//- The manifest itself stays local: it describes *this* origin (start_url, scope,
+//- name), so it has to be same-origin. Only the icon files it points at are remote.
+link(rel='manifest' href='/site.webmanifest')
+
+- var defaultSocialImage = assetHost + '/android-chrome-512x512.png'
+- var socialImage = (typeof ogImage !== 'undefined' && ogImage) ? ogImage : defaultSocialImage
+
+meta(property='og:type' content='website')
+meta(property='og:site_name' content='electerm')
+meta(property='og:url' content=url)
+meta(property='og:image' content=socialImage)
+if socialImage === defaultSocialImage
+  meta(property='og:image:width' content='512')
+  meta(property='og:image:height' content='512')
+  meta(property='og:image:alt' content='electerm logo')
+
+meta(name='twitter:card' content='summary_large_image')
+meta(name='twitter:image' content=socialImage)
+
+meta(name='theme-color' content='#ffffff')
+link(rel='stylesheet', href=cssUrl)

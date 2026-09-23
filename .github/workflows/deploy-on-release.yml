@@ -1,0 +1,53 @@
+name: Deploy history.electerm.org
+
+on:
+  repository_dispatch:
+    types: [electerm-release]
+
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    # Required so the sync script can push updated release data back.
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm i
+
+      # Mirror of electerm.org's sync-release-data: keep src/release-data /
+      # src/release-data-android in sync with the latest electerm tags. Fetches,
+      # commits and pushes if needed; otherwise a cheap no-op.
+      - name: Sync latest release data
+        run: bash bin/sync-release-data.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build site
+        run: npm run b
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOST: https://history.electerm.org
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # The action defaults to wrangler 3.90.0, which silently ignores
+          # assets.run_worker_first AND does not process src/static/_headers or
+          # src/static/_redirects. v4 handles all three.
+          wranglerVersion: '4'
+          command: deploy

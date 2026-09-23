@@ -1,0 +1,16 @@
+#!/bin/bash
+# Fail fast. Without `set -e` a failed step is invisible: the wipe at the top can
+# fail (e.g. a sandbox refusing `rm -rf`), the build then runs on top of the
+# previous output, and the result is a `public/` that mixes stale bundles for
+# deleted pages with fresh HTML — which looks like a successful build.
+set -e
+cd `dirname $0`
+cd ../
+export HOST=https://history.electerm.org
+rm -rf public
+mkdir public
+npm run build-css
+npm run build-js
+npm run cp
+npm run build-html
+npm run sitemap

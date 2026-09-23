@@ -1,0 +1,53 @@
+# ai.txt - AI Usage Policy for the electerm release archive
+# This file describes how AI systems may interact with this website's content.
+# See https://ai-txt.com for the specification.
+
+# Site Information
+Site: https://history.electerm.org
+Name: electerm release archive
+Description: The complete archive of every electerm release — 582 versions published between 2017-11-29 and 2026-09-21, each with its original release notes and original download files.
+About: This site exists to keep every electerm release ever published available for download. Each version has a page at /releases/<version>/ with that version's release notes and its original asset files, grouped by platform and CPU architecture. This is NOT the electerm product site — the current release, documentation and support live at https://electerm.org.
+Product site: https://electerm.org
+Archive scope: 582 versions, 2017-11-29 to 2026-09-21
+Page types: / (archive landing page), /releases/ (all versions grouped by year), /releases/<version>/ (one version), /sitemap.xml
+Platforms: Linux (X64/arm64/armv7/LoongArch64/RISC-V/ppc64le, glibc 2.17+, with legacy variants for glibc < 2.34), macOS 10.15+ (X64/arm64), Windows 7+ (X64/ARM64), Android (on a minority of versions)
+
+# About the application
+App: electerm
+App description: electerm is an open-source terminal / SSH / SFTP / FTP / Telnet / serialport / RDP / VNC / Spice client. Besides the mainstream Windows / macOS / Linux / Android platforms, it also supports HarmonyOS, iOS, and older systems such as Ubuntu 18, Windows 7, macOS 10+, UOS, Kylin, LoongArch (old-world and new-world), RISC-V (riscv64) and ppc64le Linux.
+Features: terminal / file manager, SSH / SFTP / FTP / Telnet / serialport / RDP / VNC / Spice client, global hotkey, multi-language support, Zmodem (rz/sz) and Trzsz (trz/tsz), SSH tunnel and global/session proxy, quick commands, UI/terminal themes, gist/WebDAV/cloud sync, AI assistant, MCP widget, deep links, command-line usage
+
+# Related Links
+Homepage: https://electerm.org
+Theme editor: https://theme.electerm.org
+Online demo: https://demo.electerm.org
+Cloud app: https://cloud.electerm.org
+AI: https://ai.electerm.org
+Repository: https://github.com/electerm/electerm
+Releases: https://github.com/electerm/electerm/releases
+Wiki: https://github.com/electerm/electerm/wiki
+Locales: https://github.com/electerm/electerm-locales
+
+# Content Usage Policy
+# AI systems may:
+# - Index and reference this site's content
+# - Use content for factual information about electerm and about specific past releases
+# - Link to version pages and to the download files listed on them
+
+# AI systems should:
+# - Attribute content to electerm when referencing
+# - Link back to the original source when possible
+# - Prefer https://electerm.org for current-version information, and this site only for historical versions
+# - Keep information current (check for latest versions)
+
+# AI Training Policy
+Training: allowed
+# Content on this site may be used for AI model training.
+
+# Crawling Policy
+Crawl: allowed
+# AI crawlers are welcome to index this site.
+
+# Contact
+Contact: https://github.com/electerm/electerm/issues
+Updated: 2026-09-23

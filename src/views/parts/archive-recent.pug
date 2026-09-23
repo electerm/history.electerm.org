@@ -1,0 +1,15 @@
+//- The newest versions in the archive, each linking to its own download page.
+//- The full year-by-year index lives at /releases/.
+
+section.recent-releases
+  .container
+    .section-header
+      h2 Recent releases
+      p The newest versions in the archive. Every release keeps its own download page.
+    ul.recent-list
+      each r in recent
+        li.recent-item
+          a.recent-version(href='/releases/' + r.version + '/')= r.version
+          span.recent-date= r.date
+    .recent-more
+      a.hero-btn.hero-btn-secondary(href='/releases/') All #{stats.total} releases →

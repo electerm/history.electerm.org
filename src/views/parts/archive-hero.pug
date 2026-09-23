@@ -1,0 +1,28 @@
+//- Archive hero. Reuses the electerm.org hero layout — logo, tagline, CTA
+//- buttons and the live "current version" pill — but says plainly what this
+//- site is: the release history archive, not the product site.
+
+section.hero.hero-archive
+  .container
+    img.hero-logo(src=assetHost + '/electerm.png', alt='electerm', fetchpriority='high')
+    h1.hero-title electerm release history
+    p.hero-tagline Every electerm version ever published, kept archived and still downloadable. Pick any version and grab the file for your platform.
+    .hero-version
+      span.dot
+      span Latest #{latest.version}
+      span.hero-version-date #{latest.date}
+    .hero-cta
+      a.hero-btn.hero-btn-primary(href='/releases/') Browse all #{stats.total} releases
+      a.hero-btn.hero-btn-secondary(href='/releases/' + latest.version + '/') Download #{latest.version}
+      a.hero-btn.hero-btn-secondary(href='https://electerm.org/', target='_blank', rel='noreferrer') electerm.org
+    ul.hero-stats
+      li
+        strong= stats.total
+        span versions archived
+      li
+        strong= stats.years
+        span years of releases
+      li
+        strong= stats.platforms
+        span platforms
+    p.hero-supports Linux · macOS · Windows · Android · HarmonyOS · iOS — #{stats.firstVersion} in #{stats.firstYear} through #{latest.version} in #{stats.lastYear}.

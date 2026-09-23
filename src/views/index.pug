@@ -1,0 +1,49 @@
+doctype html
+html(lang='en-US')
+  head
+    title electerm release history — download any past version
+    meta(name='description', content=desc)
+    meta(name='keywords', content=keywords)
+    meta(property='og:title' content='electerm release history')
+    meta(property='og:description' content=desc)
+    meta(name='twitter:title' content='electerm release history')
+    meta(name='twitter:description' content=desc)
+    include ./parts/react-header
+    include ./parts/page-script
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "electerm release history",
+        "alternateName": "electerm past releases archive",
+        "url": "#{host}/",
+        "description": "#{desc}",
+        "inLanguage": "en"
+      }
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "electerm release history",
+        "url": "#{host}/",
+        "isPartOf": { "@type": "WebSite", "name": "electerm", "url": "https://electerm.org/" },
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "electerm",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Windows, macOS, Linux, Android, HarmonyOS, iOS",
+          "softwareVersion": "#{latest.version}",
+          "downloadUrl": "#{host}/releases/#{latest.version}/",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        }
+      }
+  body
+    include ./parts/header
+    main
+      include ./parts/archive-hero
+      include ./parts/archive-about
+      include ./parts/archive-recent
+      include ./parts/links
+      include ./parts/star-history
+    include ./parts/footer
+    +pageScript('home')

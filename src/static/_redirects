@@ -1,0 +1,3 @@
+# Trailing slash is canonical for the releases hub; "/releases" redirects to it.
+# The site root serves its own landing page (public/index.html) — no redirect.
+/releases /releases/ 301

@@ -1,0 +1,26 @@
+# Cloudflare Workers Static Assets config for history.electerm.org
+#
+# Pure static site: a landing page at `/`, the releases hub at `/releases/` and
+# one page per version at `/releases/<version>/`. No worker script — the asset
+# runtime serves files directly and applies src/static/_headers (security) and
+# src/static/_redirects (which only canonicalises `/releases` -> `/releases/`;
+# the site root serves its own landing page).
+#
+# Build: `npm run b` -> public/. Deploy: wrangler v4 (set in the CI workflow).
+#
+# No `binding` here on purpose. Without a `main` script this is an *assets-only*
+# Worker, and Wrangler 4.13x rejects one that declares an asset binding:
+#   "Cannot use assets with a binding in an assets-only Worker."
+# Nothing could consume the binding anyway — there is no Worker script. Add one
+# back only alongside a `main`, and only if that script actually reads `env.ASSETS`.
+
+name = "electerm-history-org"
+compatibility_date = "2026-06-30"
+
+[[routes]]
+pattern = "history.electerm.org"
+custom_domain = true
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"

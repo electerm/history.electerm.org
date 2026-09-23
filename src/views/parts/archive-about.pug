@@ -1,0 +1,34 @@
+//- "What this site is" — three cards, reusing electerm.org's feature-card grid.
+//- Then the latest release called out on its own, since that is the one thing
+//- most visitors actually want and the one thing this archive is not the home of.
+
+section.features.archive-about
+  .container
+    .section-header
+      h2 This is the electerm release archive
+      p The product site is electerm.org. This site exists for one reason: past versions.
+    .features-grid
+      .feature-card
+        .feature-icon 📚
+        h3 Every version, kept
+        p All #{stats.total} electerm releases since #{stats.firstYear} are archived here with their original files, sizes and release notes — nothing is pulled when a new version ships.
+      .feature-card
+        .feature-icon ⬇️
+        h3 Download any past version
+        p Open a version, pick your OS and CPU architecture, then download from GitHub or a mirror. Old glibc builds, LoongArch, RISC-V, ARMv7 and Windows 7 packages are all still here.
+      .feature-card
+        .feature-icon 🌐
+        h3 Latest lives on electerm.org
+        p For the current release, install instructions, documentation and support, use the main site — it always tracks the newest version.
+
+section.latest-release
+  .container
+    .latest-card
+      .latest-card-body
+        span.latest-badge Latest in the archive
+        h2= latest.name || ('electerm ' + latest.version)
+        p.latest-meta Released #{latest.date} · #{latest.assetCount} files for Windows, macOS, Linux and Android
+        p.latest-note Jump to this version's page for the full file list and its release notes, or use electerm.org for the guided download.
+      .latest-card-actions
+        a.hero-btn.hero-btn-primary(href='/releases/' + latest.version + '/') View &amp; download #{latest.version}
+        a.hero-btn.hero-btn-secondary(href='https://electerm.org/#downloads', target='_blank', rel='noreferrer') Official download page
