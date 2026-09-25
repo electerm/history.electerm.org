@@ -154,3 +154,155 @@
     flex-direction column
   .download-card-links
     width 100%
+
+/* ===== Arch switcher (release pages: Windows / Linux) ===== */
+
+.arch-bar
+  display flex
+  flex-wrap wrap
+  gap 6px
+  margin-bottom 16px
+
+.arch-btn
+  padding 6px 12px
+  border 1px solid var(--color-border)
+  background var(--color-bg)
+  border-radius 999px
+  font-size 0.8rem
+  font-weight 500
+  color var(--color-text-secondary)
+  cursor pointer
+  transition all 0.15s
+  white-space nowrap
+
+.arch-btn:hover
+  border-color var(--color-primary)
+  color var(--color-primary)
+
+.arch-btn.active
+  background var(--color-primary)
+  border-color var(--color-primary)
+  color white
+
+.arch-btn:focus-visible
+  outline 2px solid var(--color-primary)
+  outline-offset 2px
+
+.arch-panel
+  display none
+
+.arch-panel.active
+  display block
+
+/* ===== Alternative install ways (brew / npm / snap / apt …) ===== */
+
+.alt-install
+  margin-top 20px
+  background var(--color-bg)
+  border 1px solid var(--color-border)
+  border-radius var(--radius-md)
+  padding 16px 20px
+
+.alt-install-title
+  font-weight 600
+  font-size 0.9rem
+  margin-bottom 12px
+
+.alt-install-list
+  display flex
+  flex-direction column
+  gap 12px
+
+.alt-install-item
+  border-top 1px solid var(--color-border-light)
+  padding-top 12px
+
+.alt-install-item:first-child
+  border-top none
+  padding-top 0
+
+.alt-install-name
+  font-weight 600
+  font-size 0.82rem
+  color var(--color-text-secondary)
+  margin-bottom 8px
+
+.alt-install-body
+  display flex
+  align-items stretch
+  gap 8px
+
+.alt-install-code
+  flex 1
+  min-width 0
+  margin 0
+  padding 10px 12px
+  background var(--color-bg-alt)
+  border 1px solid var(--color-border)
+  border-radius var(--radius-sm)
+  font-family var(--font-mono)
+  font-size 0.8rem
+  line-height 1.5
+  overflow-x auto
+  white-space pre
+
+.alt-install-code code
+  background none
+  padding 0
+  font-family inherit
+  font-size inherit
+
+.alt-copy
+  flex-shrink 0
+  align-self flex-start
+  display inline-flex
+  align-items center
+  justify-content center
+  gap 6px
+  padding 8px 14px
+  border 1px solid var(--color-border)
+  border-radius var(--radius-sm)
+  background var(--color-bg)
+  color var(--color-text-secondary)
+  font-size 0.8rem
+  font-weight 500
+  line-height 1.5
+  cursor pointer
+  transition all 0.15s
+  white-space nowrap
+
+.alt-copy:hover
+  border-color var(--color-primary)
+  color var(--color-primary)
+
+.alt-copy:active
+  transform translateY(1px)
+
+.alt-copy:focus-visible
+  outline 2px solid var(--color-primary)
+  outline-offset 2px
+
+.alt-copy.copied
+  background var(--color-success)
+  border-color var(--color-success)
+  color white
+
+.alt-install-link
+  display inline-block
+  margin-top 8px
+  font-size 0.8rem
+  color var(--color-primary)
+  word-break break-all
+
+.alt-install-link:hover
+  text-decoration underline
+
+@media (max-width: 479px)
+  .alt-install
+    padding 12px 14px
+  .alt-install-body
+    flex-direction column
+    align-items stretch
+  .alt-copy
+    align-self stretch
+    width 100%

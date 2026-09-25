@@ -104,7 +104,12 @@ function copyAltCmd (btn) {
   const done = function () {
     const old = btn.textContent
     btn.textContent = btn.dataset.copied
-    setTimeout(function () { btn.textContent = old }, 1500)
+    btn.classList.add('copied')
+    clearTimeout(btn._copiedTimer)
+    btn._copiedTimer = setTimeout(function () {
+      btn.textContent = old
+      btn.classList.remove('copied')
+    }, 1500)
   }
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done() })
