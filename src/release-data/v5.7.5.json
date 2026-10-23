@@ -1,0 +1,313 @@
+{
+  "version": "v5.7.5",
+  "date": "2026-10-23",
+  "body": "### Major updates\n\n- Support custom widget: extend electerm with your own widget, either a self-contained web UI or a config-driven panel that calls your own main process code, import widgets from the widget list, see examples at https://github.com/electerm/electerm-widget-examples\n- Quick command: support steps, a step can send text/keys, wait for output, ask for input, and steps can be grouped with a label (#4613) by @Jrjy3\n\n### New features/UI/Updates\n\n- Terminal: support right click behavior options: context menu, paste or pass through (#4635)\n- Bookmark: improved multi-level bookmark tree UI (#4620)\n- RDP: support swap ctrl/cmd key in macOS\n- AI: add MiniMax regional presets (#4633) by @octo-patch\n- Server info table only shows 10 items at init, click show more button to show all (#4625)\n- Add reload/close button for failed connection\n- Default hide the new bookmark icon in the left sidebar\n\n### Bug fixes\n\n- Fix local server port selection logic, avoid startup hang or failure when the port is not available\n- Close the SSH channel when a local-forward client resets before it opens, fix port forwarding may stuck (#4639) by @Pharex38\n- Fix RDP connection stability (#4624)\n- Fix MFA session auto reload issue\n- Fix widget instance list UI\n- Fix telnet inject shell issue (#4610)\n- Fix long tab titles blocking the titlebar drag area (#4621) by @Jrjy3\n- Resize the tab bar when a tab title changes width (#4623) by @Jrjy3\n- Fix monitor panel cover bookmark panel issue\n- Fix empty modal UI's extra borders\n- AI: fix read ftp file tool\n- Fix replay reasoning_content for deepseek thinking models\n- Avoid synthetic assistant turns after AI compression (#4632) by @nodlles\n- Security: fix Windows SFTP command injection (GHSA-ch82-q8wq-2gfv)\n\n-----\n\n### 重大更新\n\n- 支持用户自定义 widget：可以用自带界面的小应用，也可以用配置表单驱动的面板，调用自己的主进程代码，在 widget 列表里导入，示例见 https://github.com/electerm/electerm-widget-examples\n- 快捷命令：支持分步骤，每一步可以发送文本/按键、等待输出、询问输入，步骤还可以用标签分组 (#4613)（由 @Jrjy3 提供）\n\n### 新功能/界面/更新\n\n- 终端：支持右键行为选项：显示菜单、粘贴或直接透传 (#4635)\n- 书签：改进多层级书签树界面 (#4620)\n- RDP：macOS 下支持交换 ctrl/cmd 键\n- AI：添加 MiniMax 各区域预设 (#4633)（由 @octo-patch 提供）\n- 服务器信息表格初始只显示 10 项，点击显示更多按钮查看全部 (#4625)\n- 为连接失败添加重新加载/关闭按钮\n- 默认隐藏左侧栏的新书签图标\n\n### 问题修复\n\n- 修复本地服务端口选择逻辑，避免端口不可用时启动卡住或失败\n- 本地转发客户端在通道打开前重置时关闭 SSH 通道，修复端口转发可能卡住的问题 (#4639)（由 @Pharex38 提供）\n- 修复 RDP 连接稳定性问题 (#4624)\n- 修复 MFA 会话自动重载问题\n- 修复 widget 实例列表界面\n- 修复 telnet 注入 shell 问题 (#4610)\n- 修复过长标签标题遮挡标题栏拖动区域的问题 (#4621)（由 @Jrjy3 提供）\n- 标签标题宽度变化时重新计算标签栏宽度 (#4623)（由 @Jrjy3 提供）\n- 修复监控面板遮挡书签面板的问题\n- 修复空弹窗多余的边框\n- AI：修复读取 ftp 文件工具\n- 修复 deepseek 思考模型的 reasoning_content 重放问题\n- 修复 AI 压缩后产生多余 assistant 回合的问题 (#4632)（由 @nodlles 提供）\n- 安全：修复 Windows 下 SFTP 命令注入漏洞 (GHSA-ch82-q8wq-2gfv)\n\n-------\nDownload下载: [https://electerm.org](https://electerm.org)\n",
+  "assets": [
+    {
+      "name": "electerm-5.7.5-linux-aarch64-legacy.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-aarch64-legacy.rpm",
+      "size": 62732616,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.5-linux-aarch64.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-aarch64.rpm",
+      "size": 62817693,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.5-linux-amd64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-amd64-legacy.deb",
+      "size": 74691904,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-amd64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-amd64.deb",
+      "size": 102813756,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-amd64.snap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-amd64.snap",
+      "size": 111616000,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-arm64-legacy.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-arm64-legacy.AppImage",
+      "size": 95605050,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-arm64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-arm64-legacy.deb",
+      "size": 70644100,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-arm64-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-arm64-legacy.tar.gz",
+      "size": 90469106,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-linux-arm64.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-arm64.AppImage",
+      "size": 95842647,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-arm64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-arm64.deb",
+      "size": 70790392,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-arm64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-arm64.tar.gz",
+      "size": 90699150,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l-legacy.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l-legacy.AppImage",
+      "size": 83811780,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l-legacy.deb",
+      "size": 66973828,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l-legacy.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l-legacy.rpm",
+      "size": 60399160,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l-legacy.tar.gz",
+      "size": 80538174,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l.AppImage",
+      "size": 84045247,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l.deb",
+      "size": 67118720,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l.rpm",
+      "size": 60495617,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.5-linux-armv7l.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-armv7l.tar.gz",
+      "size": 80767540,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-linux-loong64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-loong64-legacy.deb",
+      "size": 152846992,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.5-linux-loong64-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-loong64-legacy.tar.gz",
+      "size": 152396643,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.5-linux-loong64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-loong64.deb",
+      "size": 96342512,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.5-linux-loong64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-loong64.tar.gz",
+      "size": 130609695,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.5-linux-loongarch64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-loongarch64-legacy.deb",
+      "size": 152846996,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.5-linux-loongarch64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-loongarch64.deb",
+      "size": 96342950,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.5-linux-ppc64el.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-ppc64el.deb",
+      "size": 108361696,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.5-linux-ppc64le.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-ppc64le.tar.gz",
+      "size": 148355513,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.5-linux-riscv64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-riscv64.deb",
+      "size": 109738882,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.5-linux-riscv64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-riscv64.tar.gz",
+      "size": 140133612,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.5-linux-x64-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-x64-legacy.tar.gz",
+      "size": 90110258,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-linux-x64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-x64.tar.gz",
+      "size": 124017422,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-linux-x86_64-legacy.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-x86_64-legacy.AppImage",
+      "size": 94956123,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-x86_64-legacy.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-x86_64-legacy.rpm",
+      "size": 66640920,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.5-linux-x86_64.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-x86_64.AppImage",
+      "size": 130422148,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-linux-x86_64.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-linux-x86_64.rpm",
+      "size": 91758741,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.5-mac-arm64.dmg",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-mac-arm64.dmg",
+      "size": 123353575,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-mac-arm64.dmg.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-mac-arm64.dmg.blockmap",
+      "size": 130238,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-mac-x64.dmg",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-mac-x64.dmg",
+      "size": 128929387,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-mac-x64.dmg.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-mac-x64.dmg.blockmap",
+      "size": 135637,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-mac10-x64.dmg",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-mac10-x64.dmg",
+      "size": 92849246,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-mac10-x64.dmg.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-mac10-x64.dmg.blockmap",
+      "size": 98946,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-win-arm64-installer.exe",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-arm64-installer.exe",
+      "size": 114024084,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-win-arm64-installer.exe.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-arm64-installer.exe.blockmap",
+      "size": 120526,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-win-arm64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-arm64.tar.gz",
+      "size": 150010341,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-win-x64-installer.exe",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-x64-installer.exe",
+      "size": 119778036,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-win-x64-installer.exe.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-x64-installer.exe.blockmap",
+      "size": 126683,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-win-x64-loose.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-x64-loose.tar.gz",
+      "size": 152025194,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-win-x64-portable.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-x64-portable.tar.gz",
+      "size": 152047564,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-win-x64.appx",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-x64.appx",
+      "size": 175941750,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.5-win-x64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win-x64.tar.gz",
+      "size": 152047352,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.5-win7.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.5/electerm-5.7.5-win7.tar.gz",
+      "size": 97803640,
+      "type": "application/gzip"
+    }
+  ]
+}
