@@ -1,0 +1,313 @@
+{
+  "version": "v5.7.21",
+  "date": "2026-10-27",
+  "body": "### New features/UI/Updates\n\n- Telnet: the bookmark form now has TX/RX line ending options(#4649)\n\n### Bug fixes\n\n- Fix the built-in default themes having no apply button in the theme form issue\n- Fix session log for legacy builds\n\n-----\n\n### 新功能/界面/更新\n\n- Telnet：书签表单新增发送/接收换行符选项 (#4649)\n\n### 问题修复\n\n- 修复主题表单中内置默认主题没有「应用」按钮的问题\n- 修复旧版构建（Windows 7、macOS 10.15、linux-legacy 等）在开启「保存终端日志到文件」后，每个新会话都无法启动并报 \"structuredClone is not defined\" 的问题 (#4650)\n\n-------\nDownload下载: [https://electerm.org](https://electerm.org)\n",
+  "assets": [
+    {
+      "name": "electerm-5.7.21-linux-aarch64-legacy.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-aarch64-legacy.rpm",
+      "size": 62720612,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.21-linux-aarch64.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-aarch64.rpm",
+      "size": 62826321,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.21-linux-amd64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-amd64-legacy.deb",
+      "size": 74696528,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-amd64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-amd64.deb",
+      "size": 102817292,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-amd64.snap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-amd64.snap",
+      "size": 111620096,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-arm64-legacy.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-arm64-legacy.AppImage",
+      "size": 95613017,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-arm64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-arm64-legacy.deb",
+      "size": 70648116,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-arm64-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-arm64-legacy.tar.gz",
+      "size": 90474275,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-linux-arm64.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-arm64.AppImage",
+      "size": 95846294,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-arm64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-arm64.deb",
+      "size": 70794332,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-arm64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-arm64.tar.gz",
+      "size": 90704120,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l-legacy.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l-legacy.AppImage",
+      "size": 83815676,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l-legacy.deb",
+      "size": 66977832,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l-legacy.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l-legacy.rpm",
+      "size": 60403176,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l-legacy.tar.gz",
+      "size": 80542126,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l.AppImage",
+      "size": 84048931,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l.deb",
+      "size": 67122656,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l.rpm",
+      "size": 60502149,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.21-linux-armv7l.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-armv7l.tar.gz",
+      "size": 80773322,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-linux-loong64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-loong64-legacy.deb",
+      "size": 152854094,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.21-linux-loong64-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-loong64-legacy.tar.gz",
+      "size": 152401767,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.21-linux-loong64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-loong64.deb",
+      "size": 96345216,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.21-linux-loong64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-loong64.tar.gz",
+      "size": 130620288,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.21-linux-loongarch64-legacy.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-loongarch64-legacy.deb",
+      "size": 152853834,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.21-linux-loongarch64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-loongarch64.deb",
+      "size": 96349416,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.21-linux-ppc64el.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-ppc64el.deb",
+      "size": 108367358,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.21-linux-ppc64le.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-ppc64le.tar.gz",
+      "size": 148363972,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.21-linux-riscv64.deb",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-riscv64.deb",
+      "size": 109745050,
+      "type": "application/x-debian-package"
+    },
+    {
+      "name": "electerm-5.7.21-linux-riscv64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-riscv64.tar.gz",
+      "size": 140138945,
+      "type": "application/x-gtar"
+    },
+    {
+      "name": "electerm-5.7.21-linux-x64-legacy.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-x64-legacy.tar.gz",
+      "size": 90115226,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-linux-x64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-x64.tar.gz",
+      "size": 124022940,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-linux-x86_64-legacy.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-x86_64-legacy.AppImage",
+      "size": 94964096,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-x86_64-legacy.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-x86_64-legacy.rpm",
+      "size": 66640104,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.21-linux-x86_64.AppImage",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-x86_64.AppImage",
+      "size": 130426247,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-linux-x86_64.rpm",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-linux-x86_64.rpm",
+      "size": 91768813,
+      "type": "application/x-redhat-package-manager"
+    },
+    {
+      "name": "electerm-5.7.21-mac-arm64.dmg",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-mac-arm64.dmg",
+      "size": 123353430,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-mac-arm64.dmg.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-mac-arm64.dmg.blockmap",
+      "size": 130844,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-mac-x64.dmg",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-mac-x64.dmg",
+      "size": 128935132,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-mac-x64.dmg.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-mac-x64.dmg.blockmap",
+      "size": 135799,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-mac10-x64.dmg",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-mac10-x64.dmg",
+      "size": 92852228,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-mac10-x64.dmg.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-mac10-x64.dmg.blockmap",
+      "size": 98604,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-win-arm64-installer.exe",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-arm64-installer.exe",
+      "size": 114026039,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-win-arm64-installer.exe.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-arm64-installer.exe.blockmap",
+      "size": 120587,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-win-arm64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-arm64.tar.gz",
+      "size": 150013839,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-win-x64-installer.exe",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-x64-installer.exe",
+      "size": 119781544,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-win-x64-installer.exe.blockmap",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-x64-installer.exe.blockmap",
+      "size": 126563,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-win-x64-loose.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-x64-loose.tar.gz",
+      "size": 152028417,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-win-x64-portable.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-x64-portable.tar.gz",
+      "size": 152051798,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-win-x64.appx",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-x64.appx",
+      "size": 175946055,
+      "type": "application/octet-stream"
+    },
+    {
+      "name": "electerm-5.7.21-win-x64.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win-x64.tar.gz",
+      "size": 152051662,
+      "type": "application/gzip"
+    },
+    {
+      "name": "electerm-5.7.21-win7.tar.gz",
+      "url": "https://github.com/electerm/electerm/releases/download/v5.7.21/electerm-5.7.21-win7.tar.gz",
+      "size": 97808326,
+      "type": "application/gzip"
+    }
+  ]
+}
