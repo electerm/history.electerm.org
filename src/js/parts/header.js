@@ -1,11 +1,3 @@
-// Header behavior: the mobile nav panel.
-//
-// The archive is English-only, so the language dropdown this module used to
-// manage is gone — and with it the shared language setting (./lang.js) that the
-// Blog nav links used to follow. What is left is the small-screen menu: the
-// toggle button, plus closing the panel when a link is tapped, when the page is
-// clicked outside it, or on Escape.
-
 function getPanel () {
   return document.querySelector('.mobile-nav')
 }
@@ -26,6 +18,19 @@ function setOpen (open) {
 }
 
 function init () {
+  const toggle = document.querySelector('[data-theme-toggle]')
+  const root = document.documentElement
+  toggle.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'))
+  toggle.addEventListener('click', function () {
+    const dark = root.dataset.theme !== 'dark'
+    root.dataset.theme = dark ? 'dark' : 'light'
+    toggle.setAttribute('aria-pressed', String(dark))
+    document.querySelector('meta[name="theme-color"]').content = dark ? '#0f172a' : '#ffffff'
+    try {
+      window.localStorage.setItem('theme', root.dataset.theme)
+    } catch {}
+  })
+
   const button = getButton()
   const panel = getPanel()
   if (!button || !panel) return

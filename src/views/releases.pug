@@ -1,5 +1,5 @@
 doctype html
-html(lang=langCode)
+html(data-theme='dark', lang=langCode)
   head
     title Past electerm releases - download any version
     meta(name='description', content=desc)
@@ -35,3 +35,5 @@ html(lang=langCode)
         .release-back
           a(href='/') ← Back to home
     include ./parts/footer
+    include ./parts/page-script
+    +pageScript('home')

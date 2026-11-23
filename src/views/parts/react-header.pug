@@ -34,5 +34,12 @@ if socialImage === defaultSocialImage
 meta(name='twitter:card' content='summary_large_image')
 meta(name='twitter:image' content=socialImage)
 
-meta(name='theme-color' content='#ffffff')
+meta(name='theme-color' content='#0f172a')
+script.
+  try {
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.dataset.theme = 'light'
+      document.querySelector('meta[name="theme-color"]').content = '#ffffff'
+    }
+  } catch {}
 link(rel='stylesheet', href=cssUrl)
